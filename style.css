@@ -1,0 +1,352 @@
+:root {
+    --background: #9198e5;
+    --backgrounddark: #9198e5;
+    --shadow: 0 1px 5px rgba(20, 20, 20, 0.3);
+    --fontcolor: #EDF2F4;
+    --linear : linear-gradient(#83a4d4, #9198e5);
+}
+
+html {
+    box-sizing: border-box;
+    background-color: white;
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    line-height: 1.4;
+    margin: 30px 100px;
+}
+
+.btn {
+    background-color: var(--background);
+    color: var(--fontcolor);
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover, a:hover {
+    animation-name: hover;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes hover {
+    0% {
+        
+    }
+    100% {
+        background-color: #83a4d4; 
+        color: black;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Sisältää koko sivun*/
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/*Navigointi sivun yläosassa*/
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+/*Navigoinnin linkit*/
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    box-shadow: var(--shadow);
+    text-shadow: 2px 2px #7c7c7c;
+    background-color: var(--backgrounddark);
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+}
+/*Sivun header osio*/
+
+#headertitle {
+    min-height: 400px;
+    background-image: url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    padding: 4rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    animation-name: movebackground;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes movebackground {
+    0% {background-position-x: 0%; background-position-y: 0%;}
+    100% {background-position-x: 50%; background-position-y: 35%;}
+}
+
+
+
+#headertitle h1 {
+    font-size: 4rem;
+    opacity: 0;
+    animation-name: headertitle;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: 'Raleway', bold, sans-serif;
+    text-shadow: 2px 2px #7c7c7c;
+    margin-bottom: 0px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes headertitle {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#headertitle p {
+    margin-top: 0px;
+    font-size: 2rem;
+    opacity: 0;
+    animation-name: headerp;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px #7c7c7c;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes headerp {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#headertitle a {
+    opacity: 1;
+    animation-name: headera;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    display: inline-block;
+}
+
+@keyframes headera {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.exercisesintro {
+    text-align: center;
+    margin: 20px 0;
+    /*background-color: var(--background);*/
+    background: var(--linear);
+    color: white;
+    padding: 10px;
+    box-shadow: var(--shadow);
+}
+
+.white-icon {
+    color: white;
+}
+
+.exercisesintro h1 {
+    margin-bottom: 30px;
+    font-size: 4rem;
+}
+
+.exercisesintro p {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.exercisesintro i {
+    font-size: 3rem;
+}
+
+/*Section jossa kaikki tehtävät*/
+.tehtavat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 100px;
+}
+
+.tehtava {
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.tehtava h1 {
+    text-align: center;
+    color: var(--background);
+    font-size: 3rem;
+}
+
+.tehtava h2 {
+    color: black;
+    font-size: 2rem;
+}
+
+.tehtava p {
+    color: black;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.teht1, .teht3, .teht5, .box1, .box3 {
+    border: 3px solid var(--backgrounddark);
+}
+
+.teht2, .teht4, .teht6, .box2, .box4 {
+    border: 3px solid var(--background);
+}
+
+.linkit{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    max-height: 10%;
+    position: sticky;
+}
+.linkit a {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.palaute {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    background: var(--linear);
+    color: white;
+    padding: 50px;
+    box-shadow: var(--shadow);
+}
+
+.palauteteksti {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 100px;
+}
+
+.box {
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.box h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.box p {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: var(--background);
+    padding: 1rem;
+    color: var(--fontcolor);
+    text-align: center;
+    margin: 100px 0px 0px 0px;
+}
+
+@media(max-width: 700px) {
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .tehtavat, .palauteteksti {
+        grid-template-columns: 1fr;
+    }
+
+    .exercisesintro{
+        text-align: center;
+        background-color: var(--background);
+        color: white;
+        padding: 25px;
+        box-shadow: var(--shadow);
+    }
+
+    .tehtava, .box {
+        grid-template-columns: 1fr;
+        border: 3px solid var(--background);
+    }
+    .linkit {
+        grid-template-columns: 1fr;
+    }
+    body {
+        margin: 30px 50px;
+    }
+}
+
+@media(max-width: 500px) {
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .tehtavat, .palauteteksti {
+        grid-template-columns: 1fr;
+    }
+
+    .exercisesintro{
+        text-align: center;
+        background-color: var(--background);
+        color: white;
+        padding: 25px;
+        box-shadow: var(--shadow);
+    }
+
+    .tehtava, .box {
+        grid-template-columns: 1fr;
+        border: 3px solid var(--background);
+    }
+    .linkit {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        margin: 30px 30px;
+    }
+}
