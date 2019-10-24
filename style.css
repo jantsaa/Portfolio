@@ -15,7 +15,8 @@ html {
 
 body {
     line-height: 1.4;
-    margin: 30px 100px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -35,9 +36,6 @@ body {
 }
 
 @keyframes hover {
-    0% {
-        
-    }
     100% {
         background-color: #83a4d4; 
         color: black;
@@ -52,6 +50,7 @@ img {
 .container {
     display: grid;
     grid-gap: 20px;
+    margin: 30px 60px;
 }
 
 /*Navigointi sivun yläosassa*/
@@ -74,13 +73,6 @@ img {
     box-shadow: var(--shadow);
     text-shadow: 2px 2px #7c7c7c;
     background-color: var(--backgrounddark);
-}
-
-.fixed {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 20;
 }
 /*Sivun header osio*/
 
@@ -169,7 +161,7 @@ img {
 
 .exercisesintro {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto;
     /*background-color: var(--background);*/
     background: var(--linear);
     color: white;
@@ -289,7 +281,6 @@ footer {
     padding: 1rem;
     color: var(--fontcolor);
     text-align: center;
-    margin: 100px 0px 0px 0px;
 }
 
 @media(max-width: 700px) {
@@ -305,7 +296,6 @@ footer {
         text-align: center;
         background-color: var(--background);
         color: white;
-        padding: 25px;
         box-shadow: var(--shadow);
     }
 
@@ -316,9 +306,11 @@ footer {
     .linkit {
         grid-template-columns: 1fr;
     }
-    body {
-        margin: 30px 50px;
+
+    .container {
+        margin: 15px 15px;
     }
+
 }
 
 @media(max-width: 500px) {
@@ -334,7 +326,6 @@ footer {
         text-align: center;
         background-color: var(--background);
         color: white;
-        padding: 25px;
         box-shadow: var(--shadow);
     }
 
@@ -345,8 +336,7 @@ footer {
     .linkit {
         grid-template-columns: 1fr;
     }
-
-    body {
-        margin: 30px 30px;
+    .container {
+        margin: 15px 15px;
     }
 }
